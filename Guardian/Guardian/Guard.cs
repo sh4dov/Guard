@@ -1,7 +1,12 @@
-﻿
-namespace Guardian
+﻿namespace Guardian
 {
-    public class Guard
+    public static class Guard
     {
+        static Guard()
+        {
+            That = new GuardType();
+        }
+
+        public static GuardType That { get; private set; }
     }
 }

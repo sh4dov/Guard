@@ -3,3 +3,8 @@
 /Guardian/*.suo
 
 /Guardian/out/
+
+/Guardian/Guardian.sln.DotSettings
+/Guardian/Guardian.vsmdi
+
+/Guardian/TestResults/

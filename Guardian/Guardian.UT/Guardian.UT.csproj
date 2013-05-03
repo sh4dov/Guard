@@ -26,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -51,8 +52,13 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="ConditionTest.cs" />
+    <Compile Include="ExpressionNameStrategies\ConstantExpressionNameStrategyTest.cs" />
+    <Compile Include="ExpressionNameStrategies\MemberExpressionNameStrategyTest.cs" />
     <Compile Include="GuardTest.cs" />
+    <Compile Include="GuardTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TypeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Guardian\Guardian.csproj">
