@@ -26,7 +26,7 @@ namespace Guardian
 
             if (result == null)
             {
-                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, argumentName);
+                throw new ArgumentNullException(argumentName, Resource.ArgumentCannotBeNull);
             }
         }
 

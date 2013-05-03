@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		TestSettings.testsettings = TestSettings.testsettings
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Guardian.Sample", "Guardian.Sample\Guardian.Sample.csproj", "{7244DBAC-7C1D-4019-B959-6CEF089E0CC5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{ADFD00A3-C6C6-4C1C-A0B4-649641F00ADB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADFD00A3-C6C6-4C1C-A0B4-649641F00ADB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADFD00A3-C6C6-4C1C-A0B4-649641F00ADB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7244DBAC-7C1D-4019-B959-6CEF089E0CC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7244DBAC-7C1D-4019-B959-6CEF089E0CC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7244DBAC-7C1D-4019-B959-6CEF089E0CC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7244DBAC-7C1D-4019-B959-6CEF089E0CC5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
