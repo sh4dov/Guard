@@ -1,3 +1,5 @@
 /Guardian/*.user
 
 /Guardian/*.suo
+
+/Guardian/out/
