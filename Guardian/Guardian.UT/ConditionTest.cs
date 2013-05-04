@@ -75,7 +75,7 @@ namespace Guardian.UT
         {
             int i = 0;
             var j = 1;
-            _condition.IsTrue(() => i == j);
+            _condition.MeetCondition(() => i == j);
         }
 
         [TestMethod]
@@ -83,7 +83,7 @@ namespace Guardian.UT
         {
             int i = 1;
             var j = 1;
-            _condition.IsTrue(() => i == j);
+            _condition.MeetCondition(() => i == j);
         }
 
         private object ReturnNull()
