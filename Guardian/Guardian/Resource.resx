@@ -120,6 +120,9 @@
   <data name="ArgumentCannotBeNull" xml:space="preserve">
     <value>Argument cannot be null.</value>
   </data>
+  <data name="ArgumentDoesNotMeetCondition" xml:space="preserve">
+    <value>Argument does not meet condition "{0}".</value>
+  </data>
   <data name="InvalidParameterType" xml:space="preserve">
     <value>Invalid parameter type.</value>
   </data>

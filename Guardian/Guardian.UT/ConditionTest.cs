@@ -69,6 +69,23 @@ namespace Guardian.UT
             Assert.AreEqual("argument", name);
         }
 
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentException))]
+        public void ShouldThrowExceptionIfPredicateIsNotMet()
+        {
+            int i = 0;
+            var j = 1;
+            _condition.IsTrue(() => i == j);
+        }
+
+        [TestMethod]
+        public void ShouldNotThrowExceptionIfPredicateIsMet()
+        {
+            int i = 1;
+            var j = 1;
+            _condition.IsTrue(() => i == j);
+        }
+
         private object ReturnNull()
         {
             return null;

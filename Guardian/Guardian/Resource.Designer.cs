@@ -70,6 +70,15 @@ namespace Guardian {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Argument does not meet condition &quot;{0}&quot;..
+        /// </summary>
+        internal static string ArgumentDoesNotMeetCondition {
+            get {
+                return ResourceManager.GetString("ArgumentDoesNotMeetCondition", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Invalid parameter type..
         /// </summary>
         internal static string InvalidParameterType {

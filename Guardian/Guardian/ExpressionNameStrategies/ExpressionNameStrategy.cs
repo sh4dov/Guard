@@ -9,7 +9,8 @@ namespace Guardian.ExpressionNameStrategies
         private readonly List<IExpressionNameStrategy> _strategies = new List<IExpressionNameStrategy>
             {
                 new MemberExpressionNameStrategy(),
-                new ConstantExpressionNameStrategy()
+                new ConstantExpressionNameStrategy(),
+                new BinaryExpressionNameStrategy()
             };
 
         public bool CanHandle(Expression expression)

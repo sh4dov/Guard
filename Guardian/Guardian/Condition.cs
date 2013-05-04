@@ -30,11 +30,45 @@ namespace Guardian
             }
         }
 
-        internal string GetName(Expression<Func<object>> expression)
+        public void MeetCondition(Expression<Func<bool>> expression)
         {
-            if (_expressionNameStrategy.CanHandle(expression.Body))
+            if (expression == null)
             {
-                return _expressionNameStrategy.GetName(expression.Body);
+                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, GetName(() => expression));
+            }
+
+            var expressionName = GetName(expression);
+            string argumentName = GetLeftParameterName(expression.Body as BinaryExpression);
+
+            var func = expression.Compile();
+            var result = func();
+
+            if (!result)
+            {
+                throw new ArgumentException(string.Format(Resource.ArgumentDoesNotMeetCondition, expressionName), argumentName);
+            }
+        }
+
+        internal string GetName<T>(Expression<Func<T>> expression)
+        {
+            return GetName(expression.Body);
+        }
+
+        private string GetLeftParameterName(BinaryExpression expression)
+        {
+            if (expression == null)
+            {
+                return null;
+            }
+
+            return GetName(expression.Left);
+        }
+
+        private string GetName(Expression expression)
+        {
+            if (_expressionNameStrategy.CanHandle(expression))
+            {
+                return _expressionNameStrategy.GetName(expression);
             }
 
             throw new InvalidOperationException(Resource.InvalidParameterType);
