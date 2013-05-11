@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Linq.Expressions;
-using Guardian.ExpressionNameStrategies;
+using ObjectSupporter;
 
 namespace Guardian
 {
     public sealed class Condition
     {
-        private readonly ExpressionNameStrategy _expressionNameStrategy = new ExpressionNameStrategy();
-
         internal Condition()
         {
         }
@@ -16,10 +14,10 @@ namespace Guardian
         {
             if (expression == null)
             {
-                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, GetName(() => expression));
+                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, ObjectSupport.GetName(() => expression));
             }
 
-            var argumentName = GetName(expression);
+            var argumentName = ObjectSupport.GetName(expression);
 
             var func = expression.Compile();
             var result = func();
@@ -34,10 +32,10 @@ namespace Guardian
         {
             if (expression == null)
             {
-                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, GetName(() => expression));
+                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, ObjectSupport.GetName(() => expression));
             }
 
-            var expressionName = GetName(expression);
+            var expressionName = ObjectSupport.GetName(expression);
             string argumentName = GetLeftParameterName(expression.Body as BinaryExpression);
 
             var func = expression.Compile();
@@ -51,7 +49,7 @@ namespace Guardian
 
         internal string GetName<T>(Expression<Func<T>> expression)
         {
-            return GetName(expression.Body);
+            return ObjectSupport.GetName(expression.Body);
         }
 
         private string GetLeftParameterName(BinaryExpression expression)
@@ -61,17 +59,7 @@ namespace Guardian
                 return null;
             }
 
-            return GetName(expression.Left);
-        }
-
-        private string GetName(Expression expression)
-        {
-            if (_expressionNameStrategy.CanHandle(expression))
-            {
-                return _expressionNameStrategy.GetName(expression);
-            }
-
-            throw new InvalidOperationException(Resource.InvalidParameterType);
+            return ObjectSupport.GetName(expression.Left);
         }
     }
 }

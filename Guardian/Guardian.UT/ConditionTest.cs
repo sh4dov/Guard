@@ -53,8 +53,8 @@ namespace Guardian.UT
         }
 
         [TestMethod]
-        [ExpectedException(typeof(InvalidOperationException))]
-        public void ShouldThrowExceptionWhenExpressionNotFollowToVariable()
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void AllowMethodCondition()
         {
             _condition.IsNotNull(() => ReturnNull());
         }

@@ -2,15 +2,18 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <MinimumVisualStudioVersion>10.0</MinimumVisualStudioVersion>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{996E2DB8-BB7B-4E35-895C-2EA6915F4441}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Guardian</RootNamespace>
     <AssemblyName>Guardian</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Profile3</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <BaseIntermediateOutputPath>..\out\obj\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -31,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ObjectSupporter">
+      <HintPath>..\packages\ObjectSupporter.1.3.0.0\lib\portable-win+net40+sl40+wp\ObjectSupporter.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,12 +47,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Condition.cs" />
-    <Compile Include="ExpressionNameStrategies\BinaryExpressionNameStrategy.cs" />
-    <Compile Include="ExpressionNameStrategies\ConstantExpressionNameStrategy.cs" />
-    <Compile Include="ExpressionNameStrategies\ExpressionNameStrategy.cs" />
-    <Compile Include="ExpressionNameStrategies\ExpressionNameStrategyBase.cs" />
-    <Compile Include="ExpressionNameStrategies\IExpressionNameStrategy.cs" />
-    <Compile Include="ExpressionNameStrategies\MemberExpressionNameStrategy.cs" />
     <Compile Include="Guard.cs" />
     <Compile Include="GuardType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -62,8 +62,11 @@
       <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

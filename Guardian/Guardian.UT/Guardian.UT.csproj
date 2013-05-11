@@ -53,8 +53,6 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ConditionTest.cs" />
-    <Compile Include="ExpressionNameStrategies\ConstantExpressionNameStrategyTest.cs" />
-    <Compile Include="ExpressionNameStrategies\MemberExpressionNameStrategyTest.cs" />
     <Compile Include="GuardTest.cs" />
     <Compile Include="GuardTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
