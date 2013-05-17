@@ -1,6 +1,6 @@
 ﻿namespace Guardian
 {
-    public static class Guard
+    public static partial class Guard
     {
         static Guard()
         {

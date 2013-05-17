@@ -48,6 +48,9 @@
   <ItemGroup>
     <Compile Include="Condition.cs" />
     <Compile Include="Guard.cs" />
+    <Compile Include="Guard.StaticMethods.cs">
+      <DependentUpon>Guard.cs</DependentUpon>
+    </Compile>
     <Compile Include="GuardType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resource.Designer.cs">
