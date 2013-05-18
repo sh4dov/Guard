@@ -1,12 +1,12 @@
-/Guardian/*.user
+/Cerberus/*.user
 
-/Guardian/*.suo
+/Cerberus/*.suo
 
-/Guardian/out/
+/Cerberus/out/
 
-/Guardian/Guardian.sln.DotSettings
-/Guardian/Guardian.vsmdi
+/Cerberus/Cerberus.sln.DotSettings
+/Cerberus/Cerberus.vsmdi
 
-/Guardian/TestResults/
+/Cerberus/TestResults/
 
-/Guardian/packages/*
+/Cerberus/packages/*
