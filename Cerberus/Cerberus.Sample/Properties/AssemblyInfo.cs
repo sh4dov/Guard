@@ -7,7 +7,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Cerberus.Sample")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Adrian Rojek @ Future Processing")]
+[assembly: AssemblyCompany("Adrian Rojek")]
 [assembly: AssemblyProduct("Cerberus.Sample")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]

@@ -7,7 +7,7 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("Cerberus")]
 [assembly: AssemblyDescription("Guard is a simple class which helps you validate arguments in methods and constructors.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Adrian Rojek @ Future Processing")]
+[assembly: AssemblyCompany("Adrian Rojek")]
 [assembly: AssemblyProduct("Cerberus")]
 [assembly: AssemblyCopyright("Copyright ©  2013")]
 [assembly: AssemblyTrademark("")]
@@ -24,5 +24,5 @@ using System.Runtime.CompilerServices;
 // You can specify all the values or you can default the Build and Revision Numbers
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.0.0")]
-[assembly: AssemblyFileVersion("1.0.0.0")]
+[assembly: AssemblyVersion("1.0.0.1")]
+[assembly: AssemblyFileVersion("1.0.0.1")]
