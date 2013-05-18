@@ -7,8 +7,8 @@
     <ProjectGuid>{7244DBAC-7C1D-4019-B959-6CEF089E0CC5}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Guardian.Sample</RootNamespace>
-    <AssemblyName>Guardian.Sample</AssemblyName>
+    <RootNamespace>Cerberus.Sample</RootNamespace>
+    <AssemblyName>Cerberus.Sample</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseIntermediateOutputPath>..\out\obj\$(Configuration)\$(AssemblyName)</BaseIntermediateOutputPath>
@@ -49,9 +49,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Guardian\Guardian.csproj">
+    <ProjectReference Include="..\Cerberus\Cerberus.csproj">
       <Project>{996E2DB8-BB7B-4E35-895C-2EA6915F4441}</Project>
-      <Name>Guardian</Name>
+      <Name>Cerberus</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

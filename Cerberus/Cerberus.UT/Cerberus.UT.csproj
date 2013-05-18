@@ -6,8 +6,8 @@
     <ProjectGuid>{ADFD00A3-C6C6-4C1C-A0B4-649641F00ADB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Guardian.UT</RootNamespace>
-    <AssemblyName>Guardian.UT</AssemblyName>
+    <RootNamespace>Cerberus.UT</RootNamespace>
+    <AssemblyName>Cerberus.UT</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -59,9 +59,9 @@
     <Compile Include="TypeHelper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Guardian\Guardian.csproj">
+    <ProjectReference Include="..\Cerberus\Cerberus.csproj">
       <Project>{996E2DB8-BB7B-4E35-895C-2EA6915F4441}</Project>
-      <Name>Guardian</Name>
+      <Name>Cerberus</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>

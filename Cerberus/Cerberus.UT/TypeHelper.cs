@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Guardian.UT
+namespace Cerberus.UT
 {
     internal static class TypeHelper
     {

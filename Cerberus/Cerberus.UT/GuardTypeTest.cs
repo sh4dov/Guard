@@ -1,7 +1,7 @@
 ﻿using System.Reflection;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Guardian.UT
+namespace Cerberus.UT
 {
     [TestClass]
     public class GuardTypeTest

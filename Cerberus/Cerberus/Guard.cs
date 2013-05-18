@@ -1,4 +1,4 @@
-﻿namespace Guardian
+﻿namespace Cerberus
 {
     public static partial class Guard
     {

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Guardian.Sample
+namespace Cerberus.Sample
 {
     internal class Program
     {

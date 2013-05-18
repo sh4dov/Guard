@@ -1,14 +1,14 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>$id$.Sh4DoV</id>
+    <id>$id$</id>
     <version>$version$</version>
     <title>$title$</title>
     <authors>$author$</authors>
     <owners>$author$</owners>
     <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
     <projectUrl>https://github.com/sh4dov/Guard/wiki</projectUrl>
-    <iconUrl>https://github.com/sh4dov/Guard/raw/master/Guardian/Guardian/Guardian.ico</iconUrl>
+    <iconUrl>https://github.com/sh4dov/Guard/raw/master/Cerberus/Cerberus/Cerberus.ico</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>$description$</description>
     <releaseNotes>
@@ -17,6 +17,6 @@
       * Fluent API
     </releaseNotes>
     <copyright>Copyright 2013</copyright>
-    <tags>Guardian Guard argument not null</tags>
+    <tags>Cerberus Guard argument not null</tags>
   </metadata>
 </package>

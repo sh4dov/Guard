@@ -1,4 +1,4 @@
-﻿namespace Guardian
+﻿namespace Cerberus
 {
     public sealed class GuardType
     {

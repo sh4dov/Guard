@@ -2,7 +2,7 @@
 using System.Linq.Expressions;
 using ObjectSupporter;
 
-namespace Guardian
+namespace Cerberus
 {
     public sealed class Condition
     {

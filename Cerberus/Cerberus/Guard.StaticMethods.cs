@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 
-namespace Guardian
+namespace Cerberus
 {
     public static partial class Guard
     {
