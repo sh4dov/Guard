@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Linq.Expressions;
 
 namespace Cerberus
@@ -16,7 +17,7 @@ namespace Cerberus
             That.Argument.MeetCondition(expression);
         }
 
-        public static void CollectionIsNotNullOrEmpty(Expression<Func<IList>> expression)
+        public static void CollectionIsNotNullOrEmpty<T>(Expression<Func<IEnumerable<T>>> expression)
         {
             That.Collection.IsNotNullOrEmpty(expression);
         }

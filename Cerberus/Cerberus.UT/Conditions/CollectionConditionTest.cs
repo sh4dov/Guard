@@ -30,14 +30,14 @@ namespace Cerberus.UT.Conditions
         [ExpectedException(typeof(ArgumentNullException))]
         public void ExpressionInIsNotNullOrEmptyShouldNotBeNull()
         {
-            _condition.IsNotNullOrEmpty(null);
+            _condition.IsNotNullOrEmpty<object>(null);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
         public void ShouldThrowExceptionWhenArgumentsValueIsNull()
         {
-            IList argument = null;
+            IEnumerable<object> argument = null;
 
             _condition.IsNotNullOrEmpty(() => argument);
         }

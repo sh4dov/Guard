@@ -15,6 +15,9 @@
       Features:
       * Light weight
       * Fluent API
+      * Checking arguments nulability e.g.: Guard.That.Argument.IsNotNull(() => argument);
+      * Checking conditions e.g.: Guard.That.Argument.MeetCondition(() => argument > 10);
+      * Checking collections e.g.: Guard.That.Collection.IsNotNullOrEmpty(() => list);
     </releaseNotes>
     <copyright>Copyright 2013</copyright>
     <tags>Cerberus Guard argument not null</tags>

@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using Cerberus.Properties;
 using ObjectSupporter;
@@ -15,7 +16,7 @@ namespace Cerberus.Conditions
             _argumentCondition = argumentCondition;
         }
 
-        public void IsNotNullOrEmpty(Expression<Func<IList>> expression)
+        public void IsNotNullOrEmpty<T>(Expression<Func<IEnumerable<T>>> expression)
         {
             _argumentCondition.IsNotNull(expression);
 
@@ -24,7 +25,7 @@ namespace Cerberus.Conditions
             var func = expression.Compile();
             var result = func();
 
-            if (result.Count == 0)
+            if (!result.Any())
             {
                 throw new ArgumentException(Resources.CollectionCannotBeEmpty, argumentName);
             }

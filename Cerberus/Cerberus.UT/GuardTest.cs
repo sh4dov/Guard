@@ -102,7 +102,7 @@ namespace Cerberus.UT
         [ExpectedException(typeof(ArgumentNullException))]
         public void CollectionIsNotNullOrEmptyThrowExceptionWhenCollectionIsNull()
         {
-            IList list = null;
+            IEnumerable<object> list = null;
 
             Guard.CollectionIsNotNullOrEmpty(() => list);
         }

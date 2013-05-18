@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace Cerberus.Sample
@@ -10,15 +9,30 @@ namespace Cerberus.Sample
         {
             TestArgument(new object());
             TestArgument(null);
+            TestCondition(1);
+            TestCondition(2);
             TestCollection(new List<int> { 1, 2, 3 });
             TestCollection(new List<int>());
         }
 
-        private static void TestCollection(IList list)
+        private static void TestCondition(int evenValue)
         {
             try
             {
-                Guard.CollectionIsNotNullOrEmpty(() => list);
+                Guard.That.Argument.MeetCondition(() => evenValue % 2 == 0);
+                Console.WriteLine("Argument {0} meet condition.", evenValue);
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Ups argument {0} not meet condition, exception caught: {1}", evenValue, ex.Message);
+            }
+        }
+
+        private static void TestCollection(IEnumerable<int> list)
+        {
+            try
+            {
+                Guard.That.Collection.IsNotNullOrEmpty(() => list);
                 Console.WriteLine("Collection was not empty.");
             }
             catch (ArgumentException ex)
@@ -44,7 +58,7 @@ namespace Cerberus.Sample
         {
             Guard.That.Argument.IsNotNull(() => obj);
 
-            Console.WriteLine("We need that obj is not a null.");
+            Console.WriteLine("We need that the obj value is not null.");
         }
     }
 }
