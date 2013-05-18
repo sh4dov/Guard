@@ -1,12 +1,17 @@
-﻿namespace Cerberus
+﻿using Cerberus.Conditions;
+
+namespace Cerberus
 {
     public sealed class GuardType
     {
         internal GuardType()
         {
-            Argument = new Condition();
+            Argument = new ArgumentCondition();
+            Collection = new CollectionCondition(Argument);
         }
 
-        public Condition Argument { get; set; }
+        public ArgumentCondition Argument { get; private set; }
+
+        public CollectionCondition Collection { get; private set; }
     }
 }

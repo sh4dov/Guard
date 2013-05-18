@@ -1,20 +1,26 @@
-﻿using System;
+using System;
 using System.Linq.Expressions;
+using Cerberus.Properties;
 using ObjectSupporter;
 
-namespace Cerberus
+namespace Cerberus.Conditions
 {
-    public sealed class Condition
+    public sealed class ArgumentCondition
     {
-        internal Condition()
+        internal ArgumentCondition()
         {
         }
 
         public void IsNotNull(Expression<Func<object>> expression)
         {
+            IsNotNull<object>(expression);
+        }
+
+        public void IsNotNull<T>(Expression<Func<T>> expression)
+        {
             if (expression == null)
             {
-                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, ObjectSupport.GetName(() => expression));
+                IsNotNull(() => expression);
             }
 
             var argumentName = ObjectSupport.GetName(expression);
@@ -24,7 +30,7 @@ namespace Cerberus
 
             if (result == null)
             {
-                throw new ArgumentNullException(argumentName, Resource.ArgumentCannotBeNull);
+                throw new ArgumentNullException(argumentName, Resources.ArgumentCannotBeNull);
             }
         }
 
@@ -32,7 +38,7 @@ namespace Cerberus
         {
             if (expression == null)
             {
-                throw new ArgumentNullException(Resource.ArgumentCannotBeNull, ObjectSupport.GetName(() => expression));
+                IsNotNull(() => expression);
             }
 
             var expressionName = ObjectSupport.GetName(expression);
@@ -43,7 +49,7 @@ namespace Cerberus
 
             if (!result)
             {
-                throw new ArgumentException(string.Format(Resource.ArgumentDoesNotMeetCondition, expressionName), argumentName);
+                throw new ArgumentException(string.Format(Resources.ArgumentDoesNotMeetCondition, expressionName), argumentName);
             }
         }
 

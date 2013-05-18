@@ -123,6 +123,9 @@
   <data name="ArgumentDoesNotMeetCondition" xml:space="preserve">
     <value>Argument does not meet condition "{0}".</value>
   </data>
+  <data name="CollectionCannotBeEmpty" xml:space="preserve">
+    <value>Collection cannot be empty.</value>
+  </data>
   <data name="InvalidParameterType" xml:space="preserve">
     <value>Invalid parameter type.</value>
   </data>

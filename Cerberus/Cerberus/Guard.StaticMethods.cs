@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Linq.Expressions;
 
 namespace Cerberus
@@ -13,6 +14,11 @@ namespace Cerberus
         public static void ArgumentMeetCondition(Expression<Func<bool>> expression)
         {
             That.Argument.MeetCondition(expression);
+        }
+
+        public static void CollectionIsNotNullOrEmpty(Expression<Func<IList>> expression)
+        {
+            That.Collection.IsNotNullOrEmpty(expression);
         }
     }
 }

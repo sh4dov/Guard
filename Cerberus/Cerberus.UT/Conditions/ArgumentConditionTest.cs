@@ -1,24 +1,25 @@
-﻿using System;
+using System;
 using System.Reflection;
+using Cerberus.Conditions;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-namespace Cerberus.UT
+namespace Cerberus.UT.Conditions
 {
     [TestClass]
-    public class ConditionTest
+    public class ArgumentConditionTest
     {
-        private Condition _condition;
+        private ArgumentCondition _condition;
 
         [TestInitialize]
         public void Setup()
         {
-            _condition = new Condition();
+            _condition = new ArgumentCondition();
         }
 
         [TestMethod]
-        public void ConditionDoesNotHavePublicConstructor()
+        public void DoesNotHavePublicConstructor()
         {
-            var defaultConstructor = TypeHelper.GetDefaultConstructor<Condition>(BindingFlags.Public);
+            var defaultConstructor = TypeHelper.GetDefaultConstructor<ArgumentCondition>(BindingFlags.Public);
 
             Assert.IsNull(defaultConstructor);
         }
@@ -42,6 +43,7 @@ namespace Cerberus.UT
         public void ShouldThrowExceptionWhenArgumentsValueIsNull()
         {
             object argument = null;
+
             _condition.IsNotNull(() => argument);
         }
 
@@ -76,6 +78,13 @@ namespace Cerberus.UT
             int i = 0;
             var j = 1;
             _condition.MeetCondition(() => i == j);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(ArgumentNullException))]
+        public void ShouldThrowExceptionIfPredicateExpressionIsNull()
+        {
+            _condition.MeetCondition(null);
         }
 
         [TestMethod]

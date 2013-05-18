@@ -52,7 +52,8 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="ConditionTest.cs" />
+    <Compile Include="Conditions\ArgumentConditionTest.cs" />
+    <Compile Include="Conditions\CollectionConditionTest.cs" />
     <Compile Include="GuardTest.cs" />
     <Compile Include="GuardTypeTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

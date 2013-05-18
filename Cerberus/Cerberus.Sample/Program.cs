@@ -1,16 +1,33 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 
 namespace Cerberus.Sample
 {
     internal class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
-            Test(new object());
-            Test(null);
+            TestArgument(new object());
+            TestArgument(null);
+            TestCollection(new List<int> { 1, 2, 3 });
+            TestCollection(new List<int>());
         }
 
-        private static void Test(object obj)
+        private static void TestCollection(IList list)
+        {
+            try
+            {
+                Guard.CollectionIsNotNullOrEmpty(() => list);
+                Console.WriteLine("Collection was not empty.");
+            }
+            catch (ArgumentException ex)
+            {
+                Console.WriteLine("Ups collection should not be empty, exception caught: {0}", ex.Message);
+            }
+        }
+
+        private static void TestArgument(object obj)
         {
             try
             {
