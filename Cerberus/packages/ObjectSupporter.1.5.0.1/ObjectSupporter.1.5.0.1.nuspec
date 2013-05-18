@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>ObjectSupporter</id>
+    <version>1.5.0.1</version>
+    <title>ObjectSupporter</title>
+    <authors>Adrian Rojek</authors>
+    <owners>Adrian Rojek</owners>
+    <licenseUrl>http://opensource.org/licenses/ms-pl.html</licenseUrl>
+    <projectUrl>https://github.com/sh4dov/ObjectSupport/wiki</projectUrl>
+    <iconUrl>https://github.com/sh4dov/ObjectSupport/raw/master/ObjectSupporter/ObjectSupporter/ObjectSupporter.ico</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Extracts name of the object's elements like: properties, methods, variables, constants etc.</description>
+    <releaseNotes>Features:
+      * Extract name of the local property: ObjectSupport.GetName(() =&gt; LocalProperty)
+      * Extract name of the local method: ObjectSupport.GetName(() =&gt; LocalMethod())
+      * Extract name of the variable or argument: ObjectSupport.GetName(() =&gt; variable)
+      * Extract name of the constant, enum values etc.: ObjectSupport.GetName(() =&gt; SampleEnum.EnumValue1)
+      * Extract name of the class property: ObjectSupport.GetName(c =&gt; c.Property)
+      * Extract name of the class method: ObjectSupport.GetName(c =&gt; c.Method())</releaseNotes>
+    <copyright>Copyright 2013</copyright>
+    <language />
+    <tags>Object Support helper</tags>
+  </metadata>
+</package>
